@@ -3,6 +3,7 @@
   <main class="main">
     <div class="container">
       <app-job-card *ngFor="let job of filteredJobs"
+      [job]="job"
       (roleSelected)="addRole($event)"
       (levelSelected)="addLevel($event)"
       (languageSelected)="addLanguage($event)"
