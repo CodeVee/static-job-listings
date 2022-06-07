@@ -1,42 +1,38 @@
-<div class="card card--featured">
+<div class="card" [ngClass]="{'card--featured': job.featured}">
   <div class="card__primary">
-    <img src="assets/images/photosnap.svg" alt="image" class="card__img">
+    <img [src]="job.logo" alt="image" class="card__img">
     <div class="card__info">
       <div class="card__main">
-        <small class="card__title">Photosnap</small>
-        <span class="card__blip card__blip--new">NEW!</span>
-        <span class="card__blip card__blip--featured">FEATURED</span>
+        <small class="card__title">{{job.company}}</small>
+        <span *ngIf="job.new" class="card__blip card__blip--new">NEW!</span>
+        <span *ngIf="job.featured" class="card__blip card__blip--featured">FEATURED</span>
       </div>
-      <h2 class="card__header">Senior Frontend Developer</h2>
+      <h2 class="card__header">{{job.position}}</h2>
       <div class="card__details">
-        <span class="card__dit">1d ago</span>
+        <span class="card__dit">{{job.postedAt}}</span>
         <span class="card__dit"></span>
-        <span class="card__dit">Full Time</span>
+        <span class="card__dit">{{job.contract}}</span>
         <span class="card__dit"></span>
-        <span class="card__dit">USA only</span>
+        <span class="card__dit">{{job.location}}</span>
       </div>
     </div>
   </div>
   <div class="card__secondary">
-    <button class="card__btn">
+    <button (click)="selectRole(job.role)" class="card__btn">
       <div class="mask"></div>
-      Frontend
+      {{job.role}}
     </button>
-    <button class="card__btn">
+    <button (click)="selectLevel(job.level)" class="card__btn">
       <div class="mask"></div>
-      Senior
+      {{job.level}}
     </button>
-    <button class="card__btn">
+    <button (click)="selectLanguage(language)" *ngFor="let language of job.languages" class="card__btn">
       <div class="mask"></div>
-      HTML
+      {{language}}
     </button>
-    <button class="card__btn">
+    <button (click)="selectTool(tool)" *ngFor="let tool of job.tools" class="card__btn">
       <div class="mask"></div>
-      CSS
-    </button>
-    <button class="card__btn">
-      <div class="mask"></div>
-      JavaScript
+      {{tool}}
     </button>
   </div>
 </div>

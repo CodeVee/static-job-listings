@@ -2,7 +2,12 @@
   <header class="header"></header>
   <main class="main">
     <div class="container">
-      <app-job-card></app-job-card>
+      <app-job-card *ngFor="let job of filteredJobs"
+      (roleSelected)="addRole($event)"
+      (levelSelected)="addLevel($event)"
+      (languageSelected)="addLanguage($event)"
+      (toolSelected)="addTool($event)"
+      ></app-job-card>
     </div>
   </main>
 </div>
