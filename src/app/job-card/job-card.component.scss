@@ -71,6 +71,11 @@
     line-height: 2.4rem;
     font-weight: $fw-700;
     margin-bottom: .7rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $desaturated-dark-cyan;
+    }
   }
 
   &__details {
@@ -103,13 +108,8 @@
   &__btn {
     border: none;
     outline: none;
-    color:  $desaturated-dark-cyan;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    letter-spacing:  -0.123077px;
-    font-weight: $fw-700;
+    background: transparent;
     padding: .5rem .8rem .3rem .9rem;
-    border-radius: .4rem;
     cursor: pointer;
     position: relative;
 
@@ -121,10 +121,32 @@
       left: 0;
       background:  $desaturated-dark-cyan;
       opacity: .1;
+      border-radius: .4rem;
+    }
+
+    span {
+      color:  $desaturated-dark-cyan;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      letter-spacing:  -0.123077px;
+      font-weight: $fw-700;
+      position: relative;
     }
 
     &:not(:last-child) {
       margin-right: 1.6rem;
+    }
+
+    &:hover {
+
+      span {
+        color: $white;
+      }
+
+      .mask {
+        opacity: 1;
+        z-index: 0;
+      }
     }
   }
 }

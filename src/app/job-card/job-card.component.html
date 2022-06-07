@@ -20,19 +20,19 @@
   <div class="card__secondary">
     <button (click)="selectRole(job.role)" class="card__btn">
       <div class="mask"></div>
-      {{job.role}}
+      <span>{{job.role}}</span>
     </button>
     <button (click)="selectLevel(job.level)" class="card__btn">
       <div class="mask"></div>
-      {{job.level}}
+      <span>{{job.level}}</span>
     </button>
     <button (click)="selectLanguage(language)" *ngFor="let language of job.languages" class="card__btn">
       <div class="mask"></div>
-      {{language}}
+      <span>{{language}}</span>
     </button>
     <button (click)="selectTool(tool)" *ngFor="let tool of job.tools" class="card__btn">
       <div class="mask"></div>
-      {{tool}}
+      <span>{{tool}}</span>
     </button>
   </div>
 </div>
