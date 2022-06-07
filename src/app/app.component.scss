@@ -1,0 +1,63 @@
+@import 'colors';
+@import 'mixins';
+
+.page {
+  max-width: $max-width;
+  background: $light-grayish-cyan;
+  margin: auto;
+  padding-bottom: 12rem;
+
+  @include mobile-wide {
+    padding-bottom: 3.4rem;
+  }
+}
+
+.container {
+  width: 111rem;
+  margin: 0 auto;
+
+  @include mobile-wide {
+    width: 32.7rem;
+  }
+}
+
+.header {
+  height: 15.6rem;
+  background-color: $desaturated-dark-cyan;
+  background-image: url('../assets/images/bg-header-desktop.svg');
+  background-size: cover;
+
+  @include mobile-wide {
+    background-image: url('../assets/images/bg-header-mobile.svg');
+  }
+}
+
+.main {
+  min-height: calc(100vh - 15.6rem);
+}
+
+.search {
+  margin-top: -3.6rem;
+  margin-bottom: 4rem;
+  visibility: hidden;
+
+  @include mobile-wide {
+    margin-bottom: 0;
+    visibility: visible;
+    display: none;
+  }
+}
+
+.jobs {
+  @include mobile-wide {
+    margin-top: 5.6rem;
+  }
+}
+
+.show {
+  visibility: visible;
+
+  @include mobile-wide {
+    display: block;
+  }
+}
