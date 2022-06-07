@@ -1,0 +1,41 @@
+<div class="bar">
+  <div class="bar__filters">
+    <div class="bar__filter" *ngFor="let role of roles">
+      <div class="bar__text">
+        <div class="mask"></div>
+        <span class="inner-text">{{role}}</span>
+      </div>
+      <button (click)="selectRole(role)" class="bar__remove">
+        <img src="assets/images/icon-remove.svg" alt="remove">
+      </button>
+    </div>
+    <div class="bar__filter" *ngFor="let level of levels">
+      <div class="bar__text">
+        <div class="mask"></div>
+        <span class="inner-text">{{level}}</span>
+      </div>
+      <button (click)="selectLevel(level)" class="bar__remove">
+        <img src="assets/images/icon-remove.svg" alt="remove">
+      </button>
+    </div>
+    <div class="bar__filter" *ngFor="let language of languages">
+      <div class="bar__text">
+        <div class="mask"></div>
+        <span class="inner-text">{{language}}</span>
+      </div>
+      <button (click)="selectLanguage(language)" class="bar__remove">
+        <img src="assets/images/icon-remove.svg" alt="remove">
+      </button>
+    </div>
+    <div class="bar__filter" *ngFor="let tool of tools">
+      <div class="bar__text">
+        <div class="mask"></div>
+        <span class="inner-text">{{tool}}</span>
+      </div>
+      <button (click)="selectTool(tool)" class="bar__remove">
+        <img src="assets/images/icon-remove.svg" alt="remove">
+      </button>
+    </div>
+  </div>
+  <button (click)="clearFilters()" class="bar__clear">Clear</button>
+</div>

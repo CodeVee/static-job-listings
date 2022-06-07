@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { JobCardComponent } from './job-card/job-card.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JobCardComponent
+    JobCardComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

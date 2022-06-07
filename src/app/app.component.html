@@ -2,13 +2,28 @@
   <header class="header"></header>
   <main class="main">
     <div class="container">
-      <app-job-card *ngFor="let job of filteredJobs"
-      [job]="job"
-      (roleSelected)="addRole($event)"
-      (levelSelected)="addLevel($event)"
-      (languageSelected)="addLanguage($event)"
-      (toolSelected)="addTool($event)"
-      ></app-job-card>
+      <section class="search" [ngClass]="{'show': showSearchBar}">
+        <app-search-bar
+        [roles]="roles"
+        [levels]="levels"
+        [languages]="languages"
+        [tools]="tools"
+        (roleSelected)="removeRole($event)"
+        (levelSelected)="removeLevel($event)"
+        (languageSelected)="removeLanguage($event)"
+        (toolSelected)="removeTool($event)"
+        (clearSelected)="clearFilters()"
+        ></app-search-bar>
+      </section>
+      <section class="jobs">
+        <app-job-card *ngFor="let job of filteredJobs"
+        [job]="job"
+        (roleSelected)="addRole($event)"
+        (levelSelected)="addLevel($event)"
+        (languageSelected)="addLanguage($event)"
+        (toolSelected)="addTool($event)"
+        ></app-job-card>
+      </section>
     </div>
   </main>
 </div>
