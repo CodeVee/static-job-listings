@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+$white: hsl(0, 0%, 100%);
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+$light-grayish-cyan: hsl(180, 52%, 96%);
+$light-grayish-cyan: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+
+$font-league-spartan: 'League Spartan', sans-serif;
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-700: 700;
+
+$fs-8s: 8.89px;
+$fs-10: 10px;
+$fs-10s: 10.57px;
+$fs-11s: 11.04px;
+
+$mobile: 400px;
+$mobile-wide: 430px;
+$tablet: 800px;
+$tablet-wide: 830px;
+$desktop: 1280px;
+$max-width: 1440px;
+
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin mobile-wide {
+  @media (max-width: #{$mobile-wide}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: $font-league-spartan;
+  font-size: $fs-10;
+}
+
+.container {
+  width: 111rem;
+  margin: 0 auto;
+
+  @include mobile-wide {
+    width: 32.7rem;
+  }
+}
+
+@include desktop {
+  body, html {
+    font-size: $fs-8s;
+  }
+}
+
+
+@include mobile-wide {
+  body, html {
+    font-size: $fs-11s;
+  }
+}
+
+@include mobile {
+  body, html {
+    font-size: $fs-10;
+  }
+}
