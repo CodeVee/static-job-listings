@@ -1,0 +1,17 @@
+@import 'base';
+
+.page {
+  max-width: $max-width;
+  margin: auto;
+}
+
+.header {
+  height: 15.6rem;
+  background: $desaturated-dark-cyan;
+}
+
+.main {
+  padding: 7.6rem 0 12rem;
+  background: $light-grayish-cyan;
+  min-height: calc(100vh - 15.6rem);
+}
