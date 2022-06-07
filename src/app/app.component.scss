@@ -7,7 +7,9 @@
 
 .header {
   height: 15.6rem;
-  background: $desaturated-dark-cyan;
+  background-color: $desaturated-dark-cyan;
+  background-image: url('../assets/images/bg-header-desktop.svg');
+  background-size: cover;
 }
 
 .main {
