@@ -1,8 +1,20 @@
-@import 'base';
+@import 'colors';
+@import 'mixins';
 
 .page {
   max-width: $max-width;
+  background: $light-grayish-cyan;
   margin: auto;
+  padding-bottom: 12rem;
+}
+
+.container {
+  width: 111rem;
+  margin: 0 auto;
+
+  @include mobile-wide {
+    width: 32.7rem;
+  }
 }
 
 .header {
@@ -13,7 +25,14 @@
 }
 
 .main {
-  padding: 7.6rem 0 12rem;
-  background: $light-grayish-cyan;
   min-height: calc(100vh - 15.6rem);
+}
+
+.search {
+  margin: -3.6rem 0 4rem;
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
 }
