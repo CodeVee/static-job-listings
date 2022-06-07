@@ -11,6 +11,13 @@
   border-radius: .5rem;
   margin-bottom: 2.4rem;
 
+  @include mobile-wide {
+    height: 25.7rem;
+    flex-direction: column;
+    padding: 0 2.4rem 2.4rem;
+    margin-bottom: 4rem;
+  }
+
   &--featured {
     border-left: .5rem solid $desaturated-dark-cyan;
   }
@@ -19,6 +26,14 @@
   &__primary {
     margin-right: auto;
     display: flex;
+
+    @include mobile-wide {
+      flex-direction: column;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid $darker-grayish-cyan;
+      margin-bottom: 1.6rem;
+      margin-right: 0;
+    }
   }
 
   &__img {
@@ -26,6 +41,12 @@
     height: 8.8rem;
     border-radius: 50%;
     margin-right: 2.4rem;
+
+    @include mobile-wide {
+      width: 4.8rem;
+      height: 4.8rem;
+      margin: -2.4rem 0 .8rem;
+    }
   }
 
   &__info {
@@ -35,6 +56,12 @@
 
   &__main {
     display: flex;
+    height: 2.4rem;
+    margin-bottom: 1rem;
+
+    @include mobile-wide {
+      margin-bottom: .9rem;
+    }
   }
 
   &__title {
@@ -43,14 +70,20 @@
     font-size: 1.8rem;
     line-height: 1.7rem;
     margin-right: 1.5rem;
-    margin-bottom: 1.4rem;
+
+    @include mobile-wide {
+      font-size: 1.3rem;
+      line-height: 1.2rem;
+      margin-right: 3.3rem;
+      align-self: center;
+    }
   }
 
   &__blip {
     border-radius: 1.2rem;
     font-size: 1.4rem;
     line-height: 1.4rem;
-    letter-spacing:  -0.107692px;
+    letter-spacing:  -0.11px;
     font-weight: $fw-700;
     height: 2.4rem;
     color: $white;
@@ -74,6 +107,11 @@
     margin-bottom: .7rem;
     cursor: pointer;
 
+    @include mobile-wide {
+      font-size: 1.5rem;
+      margin-bottom: .8rem;
+    }
+
     &:hover {
       color: $desaturated-dark-cyan;
     }
@@ -87,8 +125,13 @@
     color: $dark-grayish-cyan;
     font-size: 1.8rem;
     line-height: 2.4rem;
-    letter-spacing:  -0.138462px;
+    letter-spacing:  -0.14px;
     font-weight: $fw-500;
+
+    @include mobile-wide {
+      font-size: 1.6rem;
+      letter-spacing:  -0.12px;
+    }
 
     &:nth-child(even) {
       color: $darker-grayish-cyan;
@@ -104,6 +147,11 @@
   &__secondary {
     display: flex;
     align-self: center;
+    gap: 1.6rem;
+
+    @include mobile-wide {
+      flex-wrap: wrap;
+    }
   }
 
   &__btn {
@@ -116,10 +164,6 @@
 
     .mask {
       border-radius: .4rem;
-    }
-
-    &:not(:last-child) {
-      margin-right: 1.6rem;
     }
 
     &:hover {

@@ -10,6 +10,13 @@
   display: flex;
   justify-content: space-between;
 
+  @include mobile-wide {
+    padding: {
+      left: 1.9rem;
+      right: 2.5rem;
+    };
+  }
+
 
   &__filters {
     display: flex;
@@ -51,15 +58,16 @@
     border: none;
     outline: none;
     background: transparent;
-    color: $desaturated-dark-cyan;
+    color: $dark-grayish-cyan;
     font-weight: $fw-700;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    letter-spacing: -0.123077px;
+    letter-spacing: -0.12px;
     cursor: pointer;
 
     &:hover {
       text-decoration: underline;
+      color: $desaturated-dark-cyan;
     }
   }
 }

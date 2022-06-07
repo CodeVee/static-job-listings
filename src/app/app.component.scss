@@ -6,6 +6,10 @@
   background: $light-grayish-cyan;
   margin: auto;
   padding-bottom: 12rem;
+
+  @include mobile-wide {
+    padding-bottom: 3.4rem;
+  }
 }
 
 .container {
@@ -22,6 +26,10 @@
   background-color: $desaturated-dark-cyan;
   background-image: url('../assets/images/bg-header-desktop.svg');
   background-size: cover;
+
+  @include mobile-wide {
+    background-image: url('../assets/images/bg-header-mobile.svg');
+  }
 }
 
 .main {
@@ -29,10 +37,27 @@
 }
 
 .search {
-  margin: -3.6rem 0 4rem;
+  margin-top: -3.6rem;
+  margin-bottom: 4rem;
   visibility: hidden;
+
+  @include mobile-wide {
+    margin-bottom: 0;
+    visibility: visible;
+    display: none;
+  }
+}
+
+.jobs {
+  @include mobile-wide {
+    margin-top: 5.6rem;
+  }
 }
 
 .show {
   visibility: visible;
+
+  @include mobile-wide {
+    display: block;
+  }
 }
